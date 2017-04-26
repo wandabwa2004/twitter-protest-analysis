@@ -10,7 +10,7 @@ keys_to_keep = ["id", "text", "smapp_timestamp", "user", "retweet_count", "retwe
 
 user_keys_to_keep = ["followers_count", "id_str", "protected", "friends_count", "statuses_count", "following", "statuses_count"]
 
-with open("womens_march_2017_data__01_21_2017__00_00_00__23_59_59.json") as file:
+with open("womens_march_2017_data__01_22_2017__00_00_00__23_59_59.json") as file:
     for line in file:
         try:
             j = json.loads(line)
@@ -29,4 +29,4 @@ with open("womens_march_2017_data__01_21_2017__00_00_00__23_59_59.json") as file
             posts.insert_one(j)
 
         except Exception as e:
-            print("Error with this JSON, {}".format(e))
+            print("Error with this JSON, {}".format(j))
